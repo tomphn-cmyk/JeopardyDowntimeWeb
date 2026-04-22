@@ -1,0 +1,64 @@
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #060f2d;
+  color: #f2f4ff;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+button {
+  background: #ffd447;
+  color: #111;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.clue-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.clue-card {
+  background: #0e1d59;
+  border: 1px solid #273d8a;
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.clue-card button {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  text-align: left;
+}
+
+.value {
+  color: #ffd447;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.answer {
+  margin-top: 0.5rem;
+  color: #83ffbf;
+}
