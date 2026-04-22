@@ -15,6 +15,19 @@ describe('parseCategoryFromHtml', () => {
     expect(category.clues[0].answer).toBe('Paris');
   });
 
+  it('parses clue fields from J-Archive-like markup', () => {
+    const fixturePath = path.join(process.cwd(), 'fixtures', 'jarchive-category.html');
+    const html = readFileSync(fixturePath, 'utf8');
+
+    const category = parseCategoryFromHtml(html);
+
+    expect(category.title).toBe('SCIENCE');
+    expect(category.clues.map((clue) => clue.value)).toEqual([200, 400]);
+    expect(category.clues[0].question).toContain('chemical symbol');
+    expect(category.clues[0].answer).toBe('H2O');
+    expect(category.clues[1].answer).toBe('The Sun');
+  });
+
   it('ignores malformed clues without both question and answer', () => {
     const html = `
       <h1 class="category-title">Science</h1>
