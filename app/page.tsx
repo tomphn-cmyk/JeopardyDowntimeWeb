@@ -7,26 +7,15 @@ export default function HomePage() {
   const [category, setCategory] = useState<JeopardyCategory | null>(null);
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
 
   const loadCategory = async () => {
     setLoading(true);
-    setError(null);
     setRevealed({});
 
     try {
       const response = await fetch('/api/random-category');
-
-      if (!response.ok) {
-        const payload = (await response.json()) as { error?: string };
-        throw new Error(payload.error ?? 'Unable to load category.');
-      }
-
       const data: JeopardyCategory = await response.json();
       setCategory(data);
-    } catch (requestError) {
-      setCategory(null);
-      setError(requestError instanceof Error ? requestError.message : 'Unable to load category.');
     } finally {
       setLoading(false);
     }
@@ -38,8 +27,6 @@ export default function HomePage() {
       <button onClick={loadCategory} disabled={loading}>
         {loading ? 'Loading...' : 'New Category'}
       </button>
-
-      {error && <p role="alert">{error}</p>}
 
       {category && (
         <section>
