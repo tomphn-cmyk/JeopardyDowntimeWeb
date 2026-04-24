@@ -4,54 +4,33 @@
     <title>J-Archive Sample</title>
   </head>
   <body>
-    <table id="jeopardy_round">
+    <table>
       <tr>
         <td class="category"><table><tr><td class="category_name">SCIENCE</td></tr></table></td>
-        <td class="category"><table><tr><td class="category_name">HISTORY</td></tr></table></td>
-        <td class="category"><table><tr><td class="category_name">LITERATURE</td></tr></table></td>
-        <td class="category"><table><tr><td class="category_name">MUSIC</td></tr></table></td>
-        <td class="category"><table><tr><td class="category_name">SPORTS</td></tr></table></td>
-        <td class="category"><table><tr><td class="category_name">GEOGRAPHY</td></tr></table></td>
       </tr>
       <tr>
-        <td id="clue_J_1_1" class="clue">
+        <td class="clue">
           <table>
-            <tr><td class="clue_value">$200</td></tr>
-            <tr><td id="clue_J_1_1_stuck" class="clue_text">The chemical symbol for water.</td></tr>
+            <tr>
+              <td class="clue_value">$400</td>
+            </tr>
+            <tr>
+              <td class="clue_text">The nearest star to Earth.</td>
+            </tr>
           </table>
-          <div onmouseover='toggle("clue_J_1_1", "&lt;em class=&quot;correct_response&quot;&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/em&gt;", "")'></div>
+          <div onmouseover="toggle('clue_J_1_2', '&lt;em class=\"correct_response\"&gt;The Sun&lt;/em&gt;', '')"></div>
         </td>
-        <td id="clue_J_2_1" class="clue">
+        <td class="clue">
           <table>
-            <tr><td class="clue_value">$200</td></tr>
-            <tr><td id="clue_J_2_1_stuck" class="clue_text">He was the first U.S. president.</td></tr>
+            <tr>
+              <td class="clue_value">$200</td>
+            </tr>
+            <tr>
+              <td class="clue_text">The chemical symbol for water.</td>
+            </tr>
           </table>
-          <div onmouseover='toggle("clue_J_2_1", "&lt;em class=&quot;correct_response&quot;&gt;George Washington&lt;/em&gt;", "")'></div>
+          <div onmouseover="toggle('clue_J_1_1', '&lt;em class=\"correct_response\"&gt;H&lt;sub&gt;2&lt;/sub&gt;O&lt;/em&gt;', '')"></div>
         </td>
-        <td id="clue_J_3_1" class="clue"></td>
-        <td id="clue_J_4_1" class="clue"></td>
-        <td id="clue_J_5_1" class="clue"></td>
-        <td id="clue_J_6_1" class="clue"></td>
-      </tr>
-      <tr>
-        <td id="clue_J_1_2" class="clue">
-          <table>
-            <tr><td class="clue_value">$400</td></tr>
-            <tr><td id="clue_J_1_2_stuck" class="clue_text">The nearest star to Earth.</td></tr>
-          </table>
-          <div onmouseover='toggle("clue_J_1_2", "&lt;em class=&quot;correct_response&quot;&gt;The Sun&lt;/em&gt;", "")'></div>
-        </td>
-        <td id="clue_J_2_2" class="clue">
-          <table>
-            <tr><td class="clue_value">$400</td></tr>
-            <tr><td id="clue_J_2_2_stuck" class="clue_text">The year the Berlin Wall fell.</td></tr>
-          </table>
-          <div onmouseover='toggle("clue_J_2_2", "&lt;em class=&quot;correct_response&quot;&gt;1989&lt;/em&gt;", "")'></div>
-        </td>
-        <td id="clue_J_3_2" class="clue"></td>
-        <td id="clue_J_4_2" class="clue"></td>
-        <td id="clue_J_5_2" class="clue"></td>
-        <td id="clue_J_6_2" class="clue"></td>
       </tr>
     </table>
   </body>
